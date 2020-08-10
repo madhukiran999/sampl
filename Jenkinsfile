@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh 'mvn -f java-tomcat-sample/pom.xml clean package'
             }
-            post {
+            post { 
                 success {
                     echo "Now Archiving the Artifacts...."
                     archiveArtifacts artifacts: '**/*.war'
